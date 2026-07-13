@@ -32,10 +32,99 @@
   --shadow-soft: 0 10px 30px -12px rgba(58, 14, 26, 0.25);
   --shadow-soft-lg: 0 20px 45px -15px rgba(58, 14, 26, 0.35);
 
+  /* Token semantici: permettono al tema scuro di ridefinirli senza toccare
+     gli elementi a colore fisso (navbar, hero, footer, cta-band...) */
+  --heading-color: var(--color-wine-800);
+  --accent-color: var(--color-wine-600);
+  --accent-color-strong: var(--color-wine-800);
+
   --radius-md: 0.9rem;
   --radius-lg: 1.25rem;
 
   --transition-base: 240ms ease;
+
+  --utility-bar-h: 42px;
+  --navbar-h: 88px;
+  --header-h: calc(var(--utility-bar-h) + var(--navbar-h));
+}
+
+/* =========================================================
+   Tema scuro (selezionabile) — ridefinisce solo i token semantici,
+   lasciando invariati gli elementi già "scuri" per branding
+   (navbar, hero, footer, cta-band, divider-banner, sezione SDG).
+   ========================================================= */
+
+html[data-theme="dark"] {
+  --color-text: #F1E6DA;
+  --color-text-muted: #C9B7A9;
+
+  --color-surface: #2A1420;
+  --color-cream-100: #180A10;
+  --color-cream-200: #221019;
+
+  --color-border: rgba(245, 239, 228, 0.14);
+
+  --shadow-soft: 0 10px 26px -10px rgba(0, 0, 0, 0.55);
+  --shadow-soft-lg: 0 20px 42px -14px rgba(0, 0, 0, 0.6);
+
+  --heading-color: var(--color-gold-400);
+  --accent-color: var(--color-gold-400);
+  --accent-color-strong: var(--color-gold-500);
+}
+
+html[data-theme="dark"] .pillar-icon,
+html[data-theme="dark"] .kpi-icon,
+html[data-theme="dark"] .highlight-icon {
+  background-color: rgba(217, 185, 79, 0.16);
+}
+
+html[data-theme="dark"] .kpi-env .kpi-icon {
+  background-color: rgba(91, 117, 83, 0.32);
+  color: #9FCB90;
+}
+
+html[data-theme="dark"] .kpi-social .kpi-icon {
+  background-color: rgba(217, 185, 79, 0.16);
+  color: var(--color-gold-400);
+}
+
+html[data-theme="dark"] .kpi-gov .kpi-icon {
+  background-color: rgba(201, 162, 39, 0.24);
+  color: var(--color-gold-400);
+}
+
+html[data-theme="dark"] .esg-tag-env {
+  color: #9FCB90;
+  background-color: rgba(91, 117, 83, 0.26);
+}
+
+html[data-theme="dark"] .esg-tag-social {
+  color: #EBB7C4;
+  background-color: rgba(140, 42, 66, 0.32);
+}
+
+html[data-theme="dark"] .esg-tag-gov {
+  color: var(--color-gold-400);
+  background-color: rgba(201, 162, 39, 0.24);
+}
+
+html[data-theme="dark"] .badge-up {
+  background-color: rgba(91, 117, 83, 0.3);
+  color: #9FCB90;
+}
+
+html[data-theme="dark"] .badge-down {
+  background-color: rgba(201, 162, 39, 0.28);
+  color: var(--color-gold-400);
+}
+
+html[data-theme="dark"] .tpm-table tbody th,
+html[data-theme="dark"] .tpm-table tbody td {
+  color: var(--color-text);
+}
+
+html[data-theme="dark"] .image-card {
+  border-color: rgba(245, 239, 228, 0.18);
 }
 
 /* =========================================================
@@ -48,7 +137,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: var(--header-h);
 }
 
 body {
@@ -56,12 +145,13 @@ body {
   color: var(--color-text);
   background-color: var(--color-cream-100);
   line-height: 1.65;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 h1, h2, h3, h4,
 .font-serif {
   font-family: "Playfair Display", Georgia, serif;
-  color: var(--color-wine-800);
+  color: var(--heading-color);
   font-weight: 700;
 }
 
@@ -69,12 +159,12 @@ h2 { font-size: clamp(1.6rem, 1.1rem + 1.8vw, 2.4rem); }
 h3 { font-size: 1.15rem; }
 
 a {
-  color: var(--color-wine-600);
+  color: var(--accent-color);
   text-decoration-thickness: 1.5px;
 }
 
 a:hover {
-  color: var(--color-wine-800);
+  color: var(--accent-color-strong);
 }
 
 /* Focus visibile e coerente per accessibilità da tastiera (WCAG 2.4.7) */
@@ -111,10 +201,100 @@ button:focus-visible,
 }
 
 /* =========================================================
+   Utility bar: lingua e tema
+   ========================================================= */
+
+.utility-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1031;
+  height: var(--utility-bar-h);
+  background-color: var(--color-wine-900);
+  border-bottom: 1px solid rgba(245, 239, 228, 0.1);
+}
+
+.utility-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  height: 100%;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  padding: 0.2rem;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: none;
+  background: transparent;
+  color: rgba(245, 239, 228, 0.7);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.lang-btn .flag {
+  font-size: 0.9rem;
+}
+
+.lang-btn:hover {
+  color: #fff;
+}
+
+.lang-btn.active {
+  background-color: var(--color-gold-400);
+  color: var(--color-wine-900);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.06);
+  color: rgba(245, 239, 228, 0.85);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.theme-toggle:hover {
+  color: #fff;
+  border-color: var(--color-gold-400);
+}
+
+.theme-toggle i {
+  color: var(--color-gold-400);
+  font-size: 0.85rem;
+}
+
+/* =========================================================
    Navbar
    ========================================================= */
 
 .main-navbar {
+  position: fixed;
+  top: var(--utility-bar-h);
+  left: 0;
+  right: 0;
   background-color: var(--color-wine-800);
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -172,7 +352,7 @@ button:focus-visible,
 
 .section {
   padding: clamp(3.5rem, 3rem + 2vw, 6rem) 0;
-  scroll-margin-top: 80px;
+  scroll-margin-top: calc(var(--header-h) - 8px);
 }
 
 .section-light { background-color: var(--color-surface); }
@@ -194,7 +374,7 @@ button:focus-visible,
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-size: 0.85rem;
-  color: var(--color-wine-600);
+  color: var(--accent-color);
   margin-bottom: 0.6rem;
 }
 
@@ -232,7 +412,7 @@ button:focus-visible,
 
 .hero {
   position: relative;
-  padding-top: calc(88px + clamp(3rem, 2.5rem + 2vw, 5rem));
+  padding-top: calc(var(--header-h) + clamp(3rem, 2.5rem + 2vw, 5rem));
   padding-bottom: clamp(3rem, 2.5rem + 2vw, 5rem);
   color: var(--color-text-on-dark);
   background:
@@ -397,7 +577,7 @@ button:focus-visible,
 .quote-card p {
   font-family: "Playfair Display", serif;
   font-size: 1.2rem;
-  color: var(--color-wine-800);
+  color: var(--heading-color);
   font-style: italic;
   line-height: 1.5;
 }
@@ -562,7 +742,7 @@ button:focus-visible,
   font-size: 1.3rem;
   margin-bottom: 1.1rem;
   background-color: rgba(110, 30, 50, 0.1);
-  color: var(--color-wine-600);
+  color: var(--accent-color);
 }
 
 .kpi-env .kpi-icon { background-color: rgba(91, 117, 83, 0.14); color: var(--color-vine-600); }
@@ -585,7 +765,7 @@ button:focus-visible,
 }
 
 .highlight-card {
-  border-top: 4px solid var(--color-wine-600);
+  border-top: 4px solid var(--accent-color);
 }
 
 .highlight-icon {
@@ -609,7 +789,7 @@ button:focus-visible,
 .mini-stat-number {
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  color: var(--color-wine-700);
+  color: var(--accent-color-strong);
   margin-right: 0.4rem;
 }
 
@@ -905,7 +1085,17 @@ button:focus-visible,
   }
 
   html {
-    scroll-padding-top: 140px;
+    scroll-padding-top: calc(var(--header-h) + 52px);
+  }
+}
+
+@media (max-width: 420px) {
+  .utility-bar-inner {
+    gap: 0.4rem;
+  }
+
+  .theme-toggle-label {
+    display: none;
   }
 }
 
