@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Applica subito tema/lingua salvati per evitare un flash visivo al caricamento -->
+  <script>
+    (function () {
+      try {
+        var storedTheme = localStorage.getItem('ruffino-theme');
+        var theme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruffino Cares · Bilancio di Sostenibilità</title>
+  <meta name="description" content="Bilancio di Sostenibilità di Ruffino: iniziative ambientali, sociali e di governance, obiettivi Agenda 2030 e risultati del programma Ruffino Cares." />
+  <meta name="theme-color" content="#5C1A2B" />
+
+  <!-- Preconnect per performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Font: Playfair Display (titoli), Inter (testo) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" referrerpolicy="no-referrer" />
+
+  <!-- Flag Icons (bandiere SVG, evita problemi di rendering degli emoji su Windows) -->
+  <link href="https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/css/flag-icons.min.css" rel="stylesheet" />
+
+  <!-- CSS personalizzato -->
+  <link href="index.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Skip link per navigazione da tastiera / screen reader -->
+  <a class="skip-link" data-i18n="skip_link" href="#main-content">Salta al contenuto principale</a>
+
+  <!-- UTILITY BAR: lingua e tema -->
+  <div class="utility-bar" role="region" aria-label="Preferenze di visualizzazione / Display preferences">
+    <div class="container utility-bar-inner">
+      <div class="lang-switch" role="group" aria-label="Selettore lingua / Language selector">
+        <button type="button" class="lang-btn active" data-lang="it" aria-pressed="true" aria-label="Italiano">
+          <span class="flag fi fi-it" aria-hidden="true"></span>IT
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">
+          <span class="flag fi fi-gb" aria-hidden="true"></span>EN
+        </button>
+      </div>
+      <button type="button" id="themeToggle" class="theme-toggle" aria-pressed="false">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        <span class="theme-toggle-label">Tema scuro</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top main-navbar" aria-label="Navigazione principale">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <i class="fa-solid fa-wine-glass" aria-hidden="true"></i>
+          <span class="brand-text">Ruffino <span class="brand-accent">Cares</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" data-i18n-aria="navbar_toggle_aria" aria-label="Apri/chiudi il menu di navigazione">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center" data-bs-spy="scroll">
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_azienda" href="#azienda">Azienda</a></li>
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_pilastri" href="#pilastri">Pilastri</a></li>
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_ambiente" href="#ambiente">Ambiente</a></li>
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_sociale" href="#sociale">Sociale</a></li>
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_governance" href="#governance">Governance</a></li>
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_sdg" href="#sdg">Agenda 2030</a></li>
+            <li class="nav-item"><a class="nav-link" data-i18n="nav_fonti" href="#fonti">Fonti</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <p class="eyebrow reveal" data-i18n="hero_eyebrow">Bilancio di Sostenibilità · FY 2023</p>
+        <h1 id="hero-title" class="reveal" data-i18n="hero_title">Ruffino Cares: la sostenibilità come valore condiviso</h1>
+        <p class="hero-lead reveal" data-i18n="hero_lead">
+          Dal 1877, la tradizione vitivinicola toscana di Ruffino incontra l'innovazione e l'impegno ESG, in un
+          percorso che affonda le radici nelle colline di Pontassieve e si estende oggi a tutte le tenute del
+          Gruppo. Attraverso il programma <strong>Ruffino Cares</strong>, l'azienda traduce la propria visione di
+          sostenibilità in azioni concrete e misurabili, capaci di generare valore condiviso per l'ambiente, per
+          le persone che vivono e lavorano il territorio e per l'intera catena di fornitura, senza mai perdere di
+          vista la qualità che da sempre contraddistingue i suoi vini.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#pilastri" class="btn btn-cta btn-lg">
+            <i class="fa-solid fa-leaf" aria-hidden="true"></i> <span data-i18n="hero_cta1">Scopri i pilastri</span>
+          </a>
+          <a href="asset/ReportSostenibilita-2023.pdf"
+             class="btn btn-cta-outline btn-lg" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span data-i18n="hero_cta2">Scarica il Bilancio (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- TODO: aggiungere KPI dai report -->
+      <!-- Indicatori chiave -->
+      <div class="container">
+        <dl class="hero-stats reveal">
+          <div class="hero-stat">
+            <dt><i class="fa-solid fa-calendar-days" aria-hidden="true"></i></dt>
+            <dd><span class="stat-number">1877</span><span class="stat-label" data-i18n="hero_stat1">Anno di fondazione, Pontassieve (FI)</span></dd>
+          </div>
+          <div class="hero-stat">
+            <dt><i class="fa-solid fa-earth-europe" aria-hidden="true"></i></dt>
+            <dd><span class="stat-number">90+</span><span class="stat-label" data-i18n="hero_stat2">Paesi in cui è presente il brand</span></dd>
+          </div>
+          <div class="hero-stat">
+            <dt><i class="fa-solid fa-bullseye" aria-hidden="true"></i></dt>
+            <dd><span class="stat-number">9/17</span><span class="stat-label" data-i18n="hero_stat3">SDGs Agenda 2030 monitorati</span></dd>
+          </div>
+          <div class="hero-stat">
+            <dt><i class="fa-solid fa-seedling" aria-hidden="true"></i></dt>
+            <dd><span class="stat-number">100%</span><span class="stat-label" data-i18n="hero_stat4">Tenute certificate Biodiversity Friend</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- AZIENDA -->
+    <section id="azienda" class="section section-light" aria-labelledby="azienda-title">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 reveal">
+            <p class="section-eyebrow" data-i18n="azienda_eyebrow">Chi è Ruffino</p>
+            <h2 id="azienda-title" data-i18n="azienda_title">Una storia toscana, un impegno globale</h2>
+            <p data-i18n="azienda_p1">
+              Fondata nel 1877 a Pontassieve, in provincia di Firenze, dai cugini Ilario e Leopoldo Ruffino,
+              l'azienda nasce con l'obiettivo di valorizzare la tradizione enologica toscana attraverso la
+              produzione di vini di elevata qualità. Nel corso di quasi centocinquant'anni di storia, Ruffino non
+              si è mai limitata a consolidare la propria posizione nel mercato vitivinicolo: è oggi uno dei marchi
+              di eccellenza del vino italiano nel mondo, presente in oltre 90 paesi e capace di promuovere
+              l'immagine del Made in Italy in ogni continente. Parte del gruppo statunitense
+              <strong>Constellation Brands</strong>, uno dei principali player mondiali del settore beverage,
+              Ruffino ha saputo coniugare tradizione enologica e innovazione tecnologica, sviluppando nel tempo
+              una strategia di sostenibilità sempre più integrata nel proprio modello di business e nelle proprie
+              tenute, distribuite tra alcune delle zone vitivinicole più celebri della Toscana.
+            </p>
+            <p data-i18n="azienda_p2">
+              Nel 2018 nasce <strong>Ruffino Cares</strong>, il programma attraverso cui l'azienda concretizza il
+              proprio impegno ESG (Environmental, Social, Governance), inizialmente pensato come contenitore di
+              iniziative legate alla Corporate Social Responsibility e progressivamente evolutosi fino a
+              rappresentare il quadro strategico di riferimento per l'implementazione delle politiche di
+              sostenibilità, con l'obiettivo dichiarato di consolidarsi come <em>Brand of Purpose</em> entro il
+              2025, offrendo ai consumatori una risposta concreta e verificabile in termini di responsabilità
+              produttiva.
+            </p>
+          </div>
+          <div class="col-lg-5 reveal">
+            <blockquote class="quote-card mb-4">
+              <i class="fa-solid fa-quote-left quote-icon" aria-hidden="true"></i>
+              <p data-i18n="azienda_quote">
+                "Dare una risposta concreta anche ai consumatori, sempre più attenti e orientati alla ricerca
+                di prodotti sostenibili, frutto di una catena di produzione responsabile."
+              </p>
+              <cite data-i18n="azienda_cite">Ruffino Cares, dal Bilancio di Sostenibilità FY 2023</cite>
+            </blockquote>
+            <figure class="image-card">
+              <img src="asset/images/mappa-tenute-toscana.jpg" data-i18n-alt="azienda_map_alt"
+                   alt="Mappa illustrata della Toscana con la localizzazione delle sette tenute Ruffino: Poggio Casciano, Montemasso, Gretole, Santedame, La Garzaia, La Solatìa e Greppone Mazzi." />
+              <figcaption><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><span data-i18n="azienda_map_caption">Le sette tenute Ruffino nel cuore della Toscana · Fonte: ruffino.it</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider con immagine: passaggio tra Azienda e Pilastri -->
+    <div class="container">
+      <div class="divider-banner reveal">
+        <div class="divider-banner-content">
+          <p class="section-eyebrow">Ruffino Cares</p>
+          <h3 data-i18n="divider_title">Un impegno che nasce dalla terra e arriva alle persone</h3>
+          <p data-i18n="divider_text">
+            Ogni tenuta, ogni filare e ogni borgo rurale che punteggia il paesaggio toscano racconta una parte
+            della strategia di sostenibilità di Ruffino: un percorso che parte dalla cura del suolo e arriva,
+            passo dopo passo, fino alle comunità locali che vivono e lavorano in questi luoghi.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILASTRI -->
+    <section id="pilastri" class="section section-tint" aria-labelledby="pilastri-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-eyebrow" data-i18n="pilastri_eyebrow">Il programma Ruffino Cares</p>
+          <h2 id="pilastri-title" data-i18n="pilastri_title">I quattro pilastri della sostenibilità</h2>
+          <p class="section-lead" data-i18n="pilastri_lead">
+            Il quadro strategico attraverso cui Ruffino traduce l'impegno ESG in azioni concrete, integrando la
+            sostenibilità non come un insieme di interventi occasionali, ma come un approccio strutturato che
+            guida le decisioni e le attività dell'intera organizzazione, dal vigneto alla cantina, fino al
+            rapporto con consumatori e comunità.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="pillar-card">
+              <div class="pillar-icon" aria-hidden="true"><i class="fa-solid fa-seedling"></i></div>
+              <h3 data-i18n="pillar1_title">Sostenibilità ambientale e produttiva</h3>
+              <p data-i18n="pillar1_text">Tutela dell'ambiente e della sua biodiversità attraverso l'uso di pratiche agronomiche
+                sostenibili, la conversione progressiva al biologico, l'adozione di una viticoltura di
+                precisione basata su dati e sensori, e un uso quanto più possibile consapevole delle risorse
+                idriche ed energetiche disponibili sul territorio.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="pillar-card">
+              <div class="pillar-icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
+              <h3 data-i18n="pillar2_title">Diversità e inclusione</h3>
+              <p data-i18n="pillar2_text">Incoraggiare una cultura aziendale realmente inclusiva, caratterizzata dalla diversità di
+                background, esperienze e punti di vista, che rifletta fedelmente i consumatori e le comunità in
+                cui l'azienda vive e lavora, favorendo un senso di appartenenza condiviso a tutti i livelli.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="pillar-card">
+              <div class="pillar-icon" aria-hidden="true"><i class="fa-solid fa-wine-glass"></i></div>
+              <h3 data-i18n="pillar3_title">Bere responsabile</h3>
+              <p data-i18n="pillar3_text">Promuovere attivamente la responsabilità e la moderazione nel consumo di bevande alcoliche,
+                attraverso iniziative ricreative ed educative volte a diffondere informazioni sui danni
+                provocati dall'abuso di alcol e a valorizzare il significato socio-culturale del consumo
+                consapevole.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="pillar-card">
+              <div class="pillar-icon" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></div>
+              <h3 data-i18n="pillar4_title">Impegno verso gli altri</h3>
+              <p data-i18n="pillar4_text">Sostenere concretamente le comunità locali, supportando iniziative a favore delle eccellenze
+                del territorio, l'associazionismo di prossimità, le categorie più deboli e le persone in
+                difficoltà, in una logica di restituzione (<em>giving back</em>) di parte del valore generato.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMBIENTE (ENVIRONMENTAL) -->
+    <section id="ambiente" class="section section-light" aria-labelledby="ambiente-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-eyebrow esg-tag esg-tag-env" data-i18n="ambiente_tag">E · Ambientale</p>
+          <h2 id="ambiente-title" data-i18n="ambiente_title">Sostenibilità ambientale e custodia del territorio</h2>
+          <p class="section-lead" data-i18n="ambiente_lead">
+            La gestione responsabile del territorio agricolo rappresenta uno dei pilastri fondamentali per
+            garantire la continuità produttiva a fronte delle minacce poste dal cambiamento climatico. Il
+            percorso di transizione verso una gestione più virtuosa si articola su tre direttrici principali,
+            strettamente interconnesse fra loro: la conversione al biologico, la tutela della biodiversità e la
+            gestione efficiente delle risorse idriche ed energetiche.
+          </p>
+        </div>
+
+        <div class="media-duo reveal" role="group" data-i18n-aria="media_duo_aria" aria-label="Fotografie delle tenute e dei vigneti Ruffino in Toscana">
+          <figure class="image-card">
+            <img src="asset/images/azienda-estate.jpg" data-i18n-alt="amb_img1_alt"
+                 alt="Filari di vigneto illuminati dalla luce dell'alba, con foschia mattutina sulle colline toscane." />
+            <figcaption><i class="fa-solid fa-sun" aria-hidden="true"></i><span data-i18n="amb_img1_caption">Filari all'alba, tra le colline delle tenute Ruffino · Fonte: ruffino.it</span></figcaption>
+          </figure>
+          <figure class="image-card">
+            <img src="asset/images/tenuta-santedame.jpg" data-i18n-alt="amb_img2_alt"
+                 alt="Veduta aerea di una tenuta Ruffino con filari di vigneto, oliveti e cipressi disposti lungo il paesaggio collinare toscano." />
+            <figcaption><i class="fa-solid fa-drone" aria-hidden="true"></i><span data-i18n="amb_img2_caption">Vista aerea di vigneti e oliveti in Toscana · Fonte: ruffino.it</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="kpi-card kpi-env">
+              <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+              <h3 data-i18n="amb_kpi1_title">Conversione al biologico</h3>
+              <p data-i18n="amb_kpi1_text">Il progressivo passaggio all'agricoltura biologica, avviato nel 2016, ha consentito a Ruffino
+                di implementare questa metodologia produttiva in tutte le proprie tenute, con l'abolizione dei
+                diserbanti chimici (sostituiti da lavorazioni meccaniche "sotto fila") e l'adozione di
+                concimazioni organiche. Fanno eccezione alcuni vigneti di recente acquisizione, la cui piena
+                copertura biologica è prevista per il <strong>2027</strong>.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="kpi-card kpi-env">
+              <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-shield-dog"></i></div>
+              <h3 data-i18n="amb_kpi2_title">Biodiversity Friend</h3>
+              <p data-i18n="amb_kpi2_text">Il <strong>100%</strong> delle tenute agricole del Gruppo è certificato secondo lo standard
+                internazionale Biodiversity Friend, un riconoscimento che attesta la presenza di ecosistemi sani
+                e favorevoli alla fauna e alla flora autoctone, a tutela dell'equilibrio naturale del
+                territorio.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="kpi-card kpi-env">
+              <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-droplet"></i></div>
+              <h3 data-i18n="amb_kpi3_title">Bacini di raccolta piovana</h3>
+              <p data-i18n="amb_kpi3_text">Ruffino ha realizzato una serie di bacini artificiali destinati alla raccolta dell'acqua
+                piovana, raggiungendo l'obiettivo strategico di coprire oltre il <strong>50%</strong> del
+                fabbisogno irriguo dei vigneti toscani con sola acqua accumulata durante i periodi piovosi,
+                senza competere con le comunità locali per l'uso dell'acqua potabile.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="kpi-card kpi-env">
+              <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-faucet-drip"></i></div>
+              <h3 data-i18n="amb_kpi4_title">Irrigazione di precisione</h3>
+              <p data-i18n="amb_kpi4_text">L'adozione dell'irrigazione a goccia di precisione, calibrata sulle reali esigenze idriche di
+                ogni singolo filare, garantisce un risparmio idrico documentato superiore al
+                <strong>50%</strong> rispetto ai metodi di irrigazione tradizionali, riducendo sensibilmente
+                gli sprechi.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="kpi-card kpi-env">
+              <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-water"></i></div>
+              <h3 data-i18n="amb_kpi5_title">Depurazione naturale</h3>
+              <p data-i18n="amb_kpi5_text">Le acque reflue di cantina vengono trattate biologicamente attraverso <strong>3
+                depuratori</strong> e <strong>3 impianti di fitodepurazione</strong> naturale, che sfruttano la
+                capacità filtrante di piante palustri, sabbia e ghiaia, secondo una filiera di processo a
+                bassissimo impatto ambientale.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="kpi-card kpi-env">
+              <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-satellite-dish"></i></div>
+              <h3 data-i18n="amb_kpi6_title">Viticoltura di precisione</h3>
+              <p data-i18n="amb_kpi6_text">Le mappe di vigore NDVI permettono di individuare lo stress idrico o la presenza di malattie
+                prima che siano visibili a occhio nudo, mentre il kit tecnologico <em>Kattivo</em>, sviluppato
+                con la partecipazione di Ruffino, regola il dosaggio degli agrofarmaci in base allo spessore
+                della chioma dei filari, consentendo un risparmio dei prodotti fitosanitari fino al
+                <strong>30%</strong>.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIALE (SOCIAL) -->
+    <section id="sociale" class="section section-tint" aria-labelledby="sociale-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-eyebrow esg-tag esg-tag-social" data-i18n="sociale_tag">S · Sociale</p>
+          <h2 id="sociale-title" data-i18n="sociale_title">Equità e catena del valore</h2>
+          <p class="section-lead" data-i18n="sociale_lead">
+            La dimensione sociale della strategia ESG di Ruffino si articola lungo due direttrici
+            complementari: da un lato la valorizzazione del capitale umano interno, attraverso politiche
+            orientate all'inclusione, alla tutela dei lavoratori e alle pari opportunità; dall'altro la
+            promozione di pratiche responsabili lungo l'intera catena del valore, coinvolgendo fornitori,
+            partner commerciali e, in ultima istanza, i consumatori stessi.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5 reveal">
+            <article class="highlight-card">
+              <div class="highlight-icon" aria-hidden="true"><i class="fa-solid fa-venus-mars"></i></div>
+              <h3 data-i18n="social_highlight_title">Certificazione Parità di Genere</h3>
+              <p data-i18n="social_highlight_text">Un traguardo significativo in questo percorso è stato il conseguimento della Certificazione
+                per la Parità di Genere secondo la prassi <strong>UNI/PdR 125:2022</strong>, che attesta
+                l'adozione di un sistema di gestione volto a garantire equità, inclusione e pari opportunità
+                all'interno dell'organizzazione. È stato inoltre creato un comitato-guida dedicato alla
+                tematica, incaricato di definire politiche, monitorare gli indicatori di performance e
+                promuovere azioni finalizzate a favorire un accesso equo alle posizioni di responsabilità,
+                oltre alla progressiva eliminazione del gender pay gap.</p>
+              <ul class="mini-stats" data-i18n-aria="mini_stats_aria" aria-label="Statistiche sulla parità di genere">
+                <li data-i18n="mini_stat1"><span class="mini-stat-number">40/60</span> rapporto tra forza lavoro femminile e maschile</li>
+                <li data-i18n="mini_stat2"><span class="mini-stat-number">~40%</span> posizioni di leadership strategica e management occupate da donne</li>
+                <li data-i18n="mini_stat3"><span class="mini-stat-number">0</span> differenza retributiva rilevata tra i generi</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-7 reveal">
+            <div class="row g-4 h-100">
+              <div class="col-sm-6">
+                <article class="kpi-card kpi-social h-100">
+                  <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-truck-fast"></i></div>
+                  <h3 data-i18n="social1_title">Evaluation of Sustainability</h3>
+                  <p data-i18n="social1_text">Ruffino considera i propri fornitori parte integrante del percorso di sostenibilità e ne
+                    richiede il rispetto di standard etici, sociali e ambientali coerenti con i valori
+                    aziendali. È stato introdotto un indicatore, denominato <strong>Evaluation of
+                    Sustainability (EoS)</strong>, ricavato da un questionario somministrato ai fornitori di
+                    <em>dry goods</em> - come i materiali per l'imbottigliamento, il packaging e la
+                    distribuzione - per valutarne il livello di sostenibilità e confrontarlo con la soglia
+                    minima degli standard aziendali lungo tutta la filiera.</p>
+                </article>
+              </div>
+              <div class="col-sm-6">
+                <article class="kpi-card kpi-social h-100">
+                  <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-champagne-glasses"></i></div>
+                  <h3 data-i18n="social2_title">Wine in Moderation</h3>
+                  <p data-i18n="social2_text">Nell'ambito della promozione del consumo responsabile, Ruffino ricopre il ruolo di
+                    <em>Ambassador Company</em> del programma europeo <strong>Wine in Moderation (WiM)</strong>,
+                    impegnandosi attivamente nella diffusione di una cultura del bere consapevole e moderato,
+                    considerata uno dei pilastri della responsabilità sociale dell'azienda.</p>
+                </article>
+              </div>
+              <div class="col-sm-12">
+                <article class="kpi-card kpi-social h-100">
+                  <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-people-line"></i></div>
+                  <h3 data-i18n="social3_title">Campagne di sensibilizzazione</h3>
+                  <p data-i18n="social3_text">Questo impegno si traduce concretamente nell'inserimento di messaggi informativi e loghi
+                    dedicati sulle etichette dei prodotti, nel sostegno a borse di studio destinate alla
+                    ricerca medica sulle patologie correlate all'abuso di alcol e nella partecipazione a
+                    campagne di sensibilizzazione, come <em>In Vino Virtus</em>, realizzate in collaborazione
+                    con le forze dell'ordine sul territorio nazionale.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOVERNANCE -->
+    <section id="governance" class="section section-light" aria-labelledby="governance-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-eyebrow esg-tag esg-tag-gov">G · Governance</p>
+          <h2 id="governance-title" data-i18n="gov_title">Compliance e miglioramento continuo</h2>
+          <p class="section-lead" data-i18n="gov_lead">
+            Il Bilancio di Sostenibilità evidenzia un sistema di governance fondato su un modello organizzativo
+            rafforzato dalla presenza di divisioni verticali su specifiche tematiche, obiettivi legati alla
+            valutazione del management e un percorso di eccellenza operativa riconosciuto a livello
+            internazionale.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-center mb-5">
+          <div class="col-lg-7 reveal">
+            <p data-i18n="gov_p1">
+              In questo assetto, l'Amministratore Delegato è responsabile dell'attuazione delle strategie
+              aziendali, con il supporto del Comitato Esecutivo e del <strong>Sustainability &amp; Environment
+              Team</strong>. Attraverso quest'ultimo, coordinato dal CSR &amp; Environmental Sustainability
+              Manager, vengono organizzati incontri a cadenza regolare, nei quali si effettua una revisione
+              delle iniziative e dei programmi di sostenibilità in base a una serie di obiettivi definiti,
+              monitorando costantemente le performance e i relativi KPI.
+            </p>
+            <p data-i18n="gov_p2">
+              A consolidare l'impegno profuso dal Gruppo in questa direzione, dal 2020 Ruffino ha formalmente
+              legato il raggiungimento di questi obiettivi al sistema di valutazione del proprio top
+              management, basato su una logica <em>Management by Objectives</em> (MBO): un meccanismo che
+              rende la sostenibilità parte integrante, e non accessoria, della responsabilità manageriale.
+            </p>
+          </div>
+          <div class="col-lg-5 reveal">
+            <figure class="image-card mb-0">
+              <img src="asset/images/cantina-ruffino.jpg" data-i18n-alt="gov_img_alt"
+                   alt="Interno della cantina storica Ruffino con botti in legno per l'affinamento del vino." />
+              <figcaption><i class="fa-solid fa-wine-bottle" aria-hidden="true"></i><span data-i18n="gov_img_caption">La cantina storica, dove tradizione e processo si incontrano · Fonte: ruffino.it</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+          <div class="col-md-4 reveal">
+            <article class="kpi-card kpi-gov">
+              <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-sitemap"></i></div>
+              <h3>Sustainability &amp; Environment Team</h3>
+              <p data-i18n="gov_kpi1_text">Coordinato dal CSR &amp; Environmental Sustainability Manager, con incontri regolari per la
+                revisione di iniziative, programmi e KPI di sostenibilità, a diretto supporto dell'Amministratore
+                Delegato e del Comitato Esecutivo.</p>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="kpi-card kpi-gov">
+              <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Management by Objectives</h3>
+              <p data-i18n="gov_kpi2_text">Dal 2020 gli obiettivi di sostenibilità sono formalmente legati al sistema di valutazione del
+                top management (MBO), rendendo la performance ESG un criterio strutturale e non accessorio
+                della gestione aziendale.</p>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="kpi-card kpi-gov">
+              <div class="kpi-icon" aria-hidden="true"><i class="fa-solid fa-award"></i></div>
+              <h3>Award for TPM Excellence</h3>
+              <p data-i18n="gov_kpi3_text">Grazie ai miglioramenti conseguiti nel tempo, l'azienda ha superato con esito positivo, a
+                maggio 2023, la prima fase di valutazione per l'ottenimento del riconoscimento <em>Award for
+                TPM Excellence</em>, rilasciato dal Japan Institute of Plant Maintenance (JIPM).</p>
+            </article>
+          </div>
+        </div>
+
+        <p class="mb-5" data-i18n="gov_tpm_p">
+          Sul piano operativo, l'elemento di svolta è rappresentato dall'introduzione del metodo
+          <strong>Total Productive Maintenance (TPM)</strong>, un approccio pratico di <em>Learning
+          Organization</em> che punta alla riduzione sistematica degli sprechi e delle inefficienze attraverso
+          il coinvolgimento attivo di tutto l'organico dell'azienda, secondo una filosofia di miglioramento
+          continuo basata su nove pilastri operativi, tra i quali assumono particolare rilievo quelli dedicati
+          alla sicurezza sul lavoro (<em>Health &amp; Safety</em>), alla formazione continua del personale
+          (<em>Training &amp; Education</em>) e alla tutela ambientale. Questo traguardo posiziona Ruffino tra le
+          realtà più avanzate del gruppo Constellation Brands nell'ambito del miglioramento continuo e
+          dell'eccellenza operativa.
+        </p>
+
+        <!-- TODO: fixring su visualizzazione tema e colori -->
+        <div class="table-card reveal">
+          <h3 class="table-card-title">
+            <i class="fa-solid fa-gears" aria-hidden="true"></i>
+            <span data-i18n="gov_table_title">Risultati del Total Productive Maintenance (TPM)</span>
+          </h3>
+          <p class="table-card-subtitle" data-i18n="gov_table_subtitle">Confronto FY 2023 vs Baseline 2019</p>
+          <div class="table-responsive">
+            <table class="table tpm-table" aria-describedby="tpm-caption">
+              <caption id="tpm-caption" class="visually-hidden" data-i18n="gov_table_caption">
+                Tabella dei risultati operativi TPM di Ruffino, con confronto tra l'anno fiscale 2023 e
+                l'anno base 2019, e relativa implicazione strategica.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="gov_th1">Indicatore operativo</th>
+                  <th scope="col" data-i18n="gov_th2">Risultato conseguito</th>
+                  <th scope="col" data-i18n="gov_th3">Implicazione strategica</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-i18n="row1_th">Efficienza di fabbrica</th>
+                  <td><span class="badge-trend badge-up">+4 p.p.</span></td>
+                  <td data-i18n="row1_td3">Ottimizzazione dei tempi di imbottigliamento e riduzione dei consumi energetici per unità di prodotto.</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="row2_th">Guasti agli impianti</th>
+                  <td><span class="badge-trend badge-down">-80%</span></td>
+                  <td data-i18n="row2_td3">Riduzione dei tempi di fermo macchina e minimizzazione degli scarti di materie prime.</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="row3_th">Reclami dei clienti</th>
+                  <td><span class="badge-trend badge-down">-65%</span></td>
+                  <td data-i18n="row3_td3">Innalzamento dello standard qualitativo percepito dal mercato finale.</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="row4_th">Puntualità delle consegne</th>
+                  <td><span class="badge-trend badge-up">+17%</span> <span class="text-muted small" data-i18n="row4_extra">(&gt;90% assoluto)</span></td>
+                  <td data-i18n="row4_td3">Consolidamento delle relazioni commerciali con la grande distribuzione e i mercati export.</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="row5_th">Azioni/condizioni non sicure</th>
+                  <td><span class="badge-trend badge-down">-80%</span></td>
+                  <td data-i18n="row5_td3">Prevenzione attiva degli infortuni sul lavoro e miglioramento del clima aziendale.</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="row6_th">Formazione del personale</th>
+                  <td><span class="badge-trend badge-up">×5</span> <span class="text-muted small" data-i18n="row6_extra">ore totali</span></td>
+                  <td data-i18n="row6_td3">Elevata specializzazione degli operatori e diffusione della cultura del miglioramento continuo.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SDG / AGENDA 2030 -->
+    <section id="sdg" class="section section-dark" aria-labelledby="sdg-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-eyebrow section-eyebrow-light" data-i18n="sdg_eyebrow">Agenda 2030</p>
+          <h2 id="sdg-title" class="text-light-heading" data-i18n="sdg_title">I 9 obiettivi di sviluppo sostenibile presi in carico</h2>
+          <p class="section-lead section-lead-light" data-i18n="sdg_lead">
+            Il programma d'azione Agenda 2030, adottato nel 2015 all'unanimità dai 193 Paesi membri delle
+            Nazioni Unite, individua 17 obiettivi di sviluppo sostenibile (SDGs) come guida fondamentale per
+            l'evoluzione dei concetti di sostenibilità a livello di impresa. Ruffino ha scelto di intervenire
+            direttamente su questi nove target, monitorandone costantemente le metriche di riferimento e
+            operando attivamente per soddisfare i requisiti richiesti.
+          </p>
+        </div>
+
+        <ul class="sdg-grid reveal" role="list">
+          <li class="sdg-card sdg-3">
+            <span class="sdg-number">3.5</span>
+            <h3 data-i18n="sdg1_title">Salute e benessere</h3>
+            <p data-i18n="sdg1_text">Rafforzare la prevenzione all'uso nocivo di alcol, promuovendo consapevolezza e moderazione nei
+              consumi.</p>
+          </li>
+          <li class="sdg-card sdg-5">
+            <span class="sdg-number">5.5</span>
+            <h3 data-i18n="sdg2_title">Parità di genere</h3>
+            <p data-i18n="sdg2_text">Garantire alle donne la piena ed effettiva partecipazione e pari opportunità di leadership a
+              tutti i livelli del processo decisionale.</p>
+          </li>
+          <li class="sdg-card sdg-6">
+            <span class="sdg-number">6.4</span>
+            <h3 data-i18n="sdg3_title">Acqua pulita e servizi igienico-sanitari</h3>
+            <p data-i18n="sdg3_text">Aumentare in modo sostanziale l'efficienza nell'uso della risorsa idrica in tutti i settori
+              produttivi.</p>
+          </li>
+          <li class="sdg-card sdg-7">
+            <span class="sdg-number">7.2</span>
+            <h3 data-i18n="sdg4_title">Energia pulita e accessibile</h3>
+            <p data-i18n="sdg4_text">Aumentare considerevolmente la quota di energie rinnovabili nel mix energetico complessivamente
+              utilizzato.</p>
+          </li>
+          <li class="sdg-card sdg-8">
+            <span class="sdg-number">8.2</span>
+            <h3 data-i18n="sdg5_title">Lavoro dignitoso e crescita economica</h3>
+            <p data-i18n="sdg5_text">Raggiungere livelli più elevati di produttività economica attraverso la diversificazione,
+              l'aggiornamento tecnologico e l'innovazione.</p>
+          </li>
+          <li class="sdg-card sdg-12">
+            <span class="sdg-number">12.5</span>
+            <h3 data-i18n="sdg6_title">Consumo e produzione responsabili</h3>
+            <p data-i18n="sdg6_text">Entro il 2030, ridurre in modo sostanziale la produzione di rifiuti attraverso prevenzione,
+              riduzione, riciclaggio e riutilizzo.</p>
+          </li>
+          <li class="sdg-card sdg-13">
+            <span class="sdg-number">13.1</span>
+            <h3 data-i18n="sdg7_title">Lotta contro il cambiamento climatico</h3>
+            <p data-i18n="sdg7_text">Rafforzare la resilienza e la capacità di adattamento ai rischi legati al clima e ai disastri
+              naturali.</p>
+          </li>
+          <li class="sdg-card sdg-15">
+            <span class="sdg-number">15.5</span>
+            <h3 data-i18n="sdg8_title">Vita sulla terra</h3>
+            <p data-i18n="sdg8_text">Adottare misure urgenti e significative per ridurre il degrado degli habitat naturali e
+              arrestare la perdita di biodiversità.</p>
+          </li>
+          <li class="sdg-card sdg-17">
+            <span class="sdg-number">17.6</span>
+            <h3 data-i18n="sdg9_title">Partnership per gli obiettivi</h3>
+            <p data-i18n="sdg9_text">Intensificare la partnership globale per lo sviluppo sostenibile, condividendo conoscenza,
+              competenze e risorse tecnologiche e finanziarie.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA FINALE: download dei documenti -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container reveal">
+        <p class="eyebrow" data-i18n="cta_eyebrow">Per saperne di più</p>
+        <h2 id="cta-title" data-i18n="cta_title">Continua ad approfondire</h2>
+        <p class="section-lead-light" data-i18n="cta_lead">
+          Questa pagina sintetizza i contenuti principali del Bilancio di Sostenibilità di Ruffino. Per una
+          lettura completa e per i dettagli metodologici sugli indicatori GRI, è possibile scaricare i
+          documenti originali in formato PDF, resi disponibili come materiale di approfondimento del presente
+          progetto.
+        </p>
+        <div class="hero-actions">
+          <a href="asset/ReportSostenibilita-2023.pdf" class="btn btn-cta btn-lg" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span data-i18n="cta_btn1">Bilancio di Sostenibilità FY 2023</span>
+          </a>
+          <a href="asset/RuffinoCares.pdf" class="btn btn-cta-outline btn-lg" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Ruffino Cares
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER / FONTI -->
+  <footer id="fonti" class="site-footer" aria-labelledby="footer-title">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <h2 id="footer-title" class="footer-brand">
+            <i class="fa-solid fa-wine-glass" aria-hidden="true"></i> Ruffino <span class="brand-accent">Cares</span>
+          </h2>
+          <p class="footer-text" data-i18n="footer_text">
+            Pagina realizzata a scopo divulgativo/accademico per sintetizzare in modo accessibile i contenuti
+            del Bilancio di Sostenibilità Ruffino (FY 2023), redatto secondo gli standard Global Reporting
+            Initiative (GRI). I documenti originali e alcune immagini di tenute e vigneti sono riportati come
+            materiale di riferimento, con indicazione della fonte, a scopo puramente illustrativo e non
+            commerciale.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="footer-heading" data-i18n="footer_heading1">Fonti principali</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="asset/ReportSostenibilita-2023.pdf" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span data-i18n="footer_link1">Bilancio di Sostenibilità FY 2023</span>
+              </a>
+            </li>
+            <li>
+              <a href="asset/RuffinoCares.pdf" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Ruffino Cares
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ruffino.it/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i> <span data-i18n="footer_link3">Sito ufficiale Ruffino</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/Translations/WCAG21-it" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-universal-access" aria-hidden="true"></i> <span data-i18n="footer_link4">Linee guida WCAG 2.1</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://asvis.it/l-agenda-2030-dell-onu-per-lo-sviluppo-sostenibile" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i> <span data-i18n="footer_link5">Agenda 2030 ONU</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h3 class="footer-heading" data-i18n="footer_heading2">Naviga</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ambiente" data-i18n="footer_nav2">Ambiente</a></li>
+            <li><a href="#sociale" data-i18n="footer_nav3">Sociale</a></li>
+            <li><a href="#governance">Governance</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <p class="footer-note" data-i18n="footer_note">
+        Elaborato accademico non ufficiale, non affiliato a Ruffino S.r.l. o Constellation Brands. Contenuti
+        sintetizzati a partire dal Bilancio di Sostenibilità pubblicato dall'azienda.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Torna su -->
+  <a href="#home" id="backToTop" class="back-to-top" data-i18n-aria="back_to_top_aria" aria-label="Torna in cima alla pagina">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+  <!-- Bootstrap Bundle (incluso Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Evidenzia il link di navigazione attivo in base alla sezione visibile
+    (function () {
+      var navLinks = document.querySelectorAll('.main-navbar .nav-link');
+      var sections = Array.from(navLinks)
+        .map(function (link) { return document.querySelector(link.getAttribute('href')); })
+        .filter(Boolean);
+
+      function setActiveLink() {
+        var current = sections[0];
+        sections.forEach(function (section) {
+          if (section.getBoundingClientRect().top <= 140) {
+            current = section;
+          }
+        });
+        navLinks.forEach(function (link) {
+          var isActive = link.getAttribute('href') === '#' + current.id;
+          link.classList.toggle('active', isActive);
+          if (isActive) {
+            link.setAttribute('aria-current', 'true');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      }
+
+      // Mostra/nasconde il pulsante "torna su"
+      var backToTop = document.getElementById('backToTop');
+      function toggleBackToTop() {
+        backToTop.classList.toggle('visible', window.scrollY > 500);
+      }
+
+      window.addEventListener('scroll', function () {
+        setActiveLink();
+        toggleBackToTop();
+      }, { passive: true });
+
+      setActiveLink();
+      toggleBackToTop();
+
+      // Chiude il menu mobile dopo il click su una voce (miglior UX su schermi piccoli)
+      var mobileMenu = document.getElementById('mainNav');
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (mobileMenu.classList.contains('show')) {
+            bootstrap.Collapse.getOrCreateInstance(mobileMenu).hide();
+          }
+        });
+      });
+
+      // Animazioni leggere "reveal on scroll", disattivate se l'utente preferisce meno movimento
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var revealTargets = document.querySelectorAll('.reveal');
+
+      if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
+      } else {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        revealTargets.forEach(function (el) { observer.observe(el); });
+      }
+    })();
+  </script>
+
+  <!--TODO: migliorare con gestione lato BE -->
+  <!-- Selettore lingua (IT/EN) e tema chiaro/scuro -->
+  <script>
+    (function () {
+      var LANG_KEY = 'ruffino-lang';
+      var THEME_KEY = 'ruffino-theme';
+
+      var metaTitleEn = 'Ruffino Cares · Sustainability Report';
+      var metaDescriptionEn = 'Ruffino Sustainability Report: environmental, social and governance initiatives, 2030 Agenda goals and results of the Ruffino Cares program.';
+
+      var translations = {
+        en: {
+          skip_link: 'Skip to main content',
+          nav_azienda: 'Company',
+          nav_pilastri: 'Pillars',
+          nav_ambiente: 'Environment',
+          nav_sociale: 'Social',
+          nav_governance: 'Governance',
+          nav_sdg: '2030 Agenda',
+          nav_fonti: 'Sources',
+
+          hero_eyebrow: 'Sustainability Report · FY 2023',
+          hero_title: 'Ruffino Cares: sustainability as shared value',
+          hero_lead: 'Since 1877, Ruffino\u2019s Tuscan winemaking tradition has embraced innovation and ESG commitment, on a journey rooted in the hills of Pontassieve and now extended to every estate of the Group. Through the <strong>Ruffino Cares</strong> program, the company turns its sustainability vision into concrete, measurable actions capable of generating shared value for the environment, for the people who live and work the land, and for the entire supply chain \u2014 without ever losing sight of the quality that has always set its wines apart.',
+          hero_cta1: 'Discover the pillars',
+          hero_cta2: 'Download the Report (PDF)',
+          hero_stat1: 'Founding year, Pontassieve (FI)',
+          hero_stat2: 'Countries where the brand is present',
+          hero_stat3: '2030 Agenda SDGs monitored',
+          hero_stat4: 'Estates certified Biodiversity Friend',
+
+          azienda_eyebrow: 'Who is Ruffino',
+          azienda_title: 'A Tuscan story, a global commitment',
+          azienda_p1: 'Founded in 1877 in Pontassieve, near Florence, by cousins Ilario and Leopoldo Ruffino, the company was created to showcase Tuscany\u2019s winemaking tradition through the production of high-quality wines. Over nearly a hundred and fifty years of history, Ruffino has never simply settled for consolidating its position in the wine market: today it is one of the world\u2019s leading Italian wine brands, present in more than 90 countries and a genuine ambassador for Made in Italy on every continent. Part of the American group <strong>Constellation Brands</strong>, one of the world\u2019s leading beverage companies, Ruffino has combined winemaking tradition with technological innovation, developing over time a sustainability strategy that is increasingly embedded in its business model and in its estates, spread across some of Tuscany\u2019s most celebrated wine-growing areas.',
+          azienda_p2: 'In 2018, <strong>Ruffino Cares</strong> was launched: the program through which the company puts its ESG (Environmental, Social, Governance) commitment into practice. Initially conceived as a container for Corporate Social Responsibility initiatives, it has gradually evolved into the strategic framework for implementing sustainability policies, with the stated goal of establishing itself as a <em>Brand of Purpose</em> by 2025, offering consumers a concrete and verifiable answer in terms of responsible production.',
+          azienda_quote: '\u201CProviding a concrete answer to consumers too, who are increasingly attentive to and focused on sustainable products, the result of a responsible production chain.\u201D',
+          azienda_cite: 'Ruffino Cares, from the FY 2023 Sustainability Report',
+          azienda_map_caption: 'Ruffino\u2019s seven estates in the heart of Tuscany · Source: ruffino.it',
+
+          divider_title: 'A commitment rooted in the land, reaching the people',
+          divider_text: 'Every estate, every row of vines and every rural hamlet dotting the Tuscan landscape tells part of Ruffino\u2019s sustainability strategy: a journey that starts with the care of the soil and reaches, step by step, the local communities who live and work in these places.',
+
+          pilastri_eyebrow: 'The Ruffino Cares program',
+          pilastri_title: 'The four pillars of sustainability',
+          pilastri_lead: 'The strategic framework through which Ruffino turns its ESG commitment into concrete actions, embedding sustainability not as a set of occasional initiatives, but as a structured approach guiding the decisions and activities of the entire organisation, from vineyard to cellar, all the way to its relationship with consumers and communities.',
+          pillar1_title: 'Environmental and productive sustainability',
+          pillar1_text: 'Protecting the environment and its biodiversity through sustainable agronomic practices, the gradual conversion to organic farming, the adoption of precision viticulture based on data and sensors, and the most conscious possible use of the water and energy resources available on the land.',
+          pillar2_title: 'Diversity and inclusion',
+          pillar2_text: 'Fostering a genuinely inclusive corporate culture, marked by diversity of background, experience and perspective, that faithfully reflects the consumers and communities in which the company lives and works, nurturing a shared sense of belonging at every level.',
+          pillar3_title: 'Responsible drinking',
+          pillar3_text: 'Actively promoting responsibility and moderation in the consumption of alcoholic beverages, through recreational and educational initiatives aimed at raising awareness of the harm caused by alcohol abuse and highlighting the socio-cultural value of mindful consumption.',
+          pillar4_title: 'Commitment to others',
+          pillar4_text: 'Concretely supporting local communities, backing initiatives in favour of local excellence, grassroots associations, disadvantaged groups and people in need, as part of a <em>giving back</em> approach to a share of the value generated.',
+
+          ambiente_tag: 'E · Environmental',
+          ambiente_title: 'Environmental sustainability and land stewardship',
+          ambiente_lead: 'Responsible management of agricultural land is one of the key pillars for ensuring production continuity in the face of the threats posed by climate change. The transition towards more virtuous management unfolds along three closely interconnected paths: conversion to organic farming, biodiversity protection, and the efficient management of water and energy resources.',
+          amb_img1_caption: 'Vine rows at dawn, among the hills of the Ruffino estates · Source: ruffino.it',
+          amb_img2_caption: 'Aerial view of vineyards and olive groves in Tuscany · Source: ruffino.it',
+          amb_kpi1_title: 'Conversion to organic farming',
+          amb_kpi1_text: 'The gradual shift to organic farming, launched in 2016, has enabled Ruffino to implement this production method across all of its estates, eliminating chemical herbicides (replaced by mechanical under-row cultivation) and adopting organic fertilisation. The only exceptions are a few recently acquired vineyards, whose full organic conversion is expected by <strong>2027</strong>.',
+          amb_kpi2_title: 'Biodiversity Friend',
+          amb_kpi2_text: '<strong>100%</strong> of the Group\u2019s agricultural estates are certified under the international Biodiversity Friend standard, confirming the presence of healthy ecosystems that support native fauna and flora, safeguarding the land\u2019s natural balance.',
+          amb_kpi3_title: 'Rainwater collection basins',
+          amb_kpi3_text: 'Ruffino has built a series of artificial basins for collecting rainwater, achieving the strategic goal of covering more than <strong>50%</strong> of the irrigation needs of its Tuscan vineyards using only water accumulated during rainy periods, without competing with local communities for drinking water.',
+          amb_kpi4_title: 'Precision irrigation',
+          amb_kpi4_text: 'The adoption of precision drip irrigation, calibrated to the actual water needs of each individual row, guarantees a documented water saving of more than <strong>50%</strong> compared with traditional irrigation methods, significantly reducing waste.',
+          amb_kpi5_title: 'Natural water treatment',
+          amb_kpi5_text: 'Cellar wastewater is biologically treated through <strong>3 purification plants</strong> and <strong>3 natural phyto-purification systems</strong>, which harness the filtering capacity of marsh plants, sand and gravel, following a process with a very low environmental impact.',
+          amb_kpi6_title: 'Precision viticulture',
+          amb_kpi6_text: 'NDVI vigour maps make it possible to detect water stress or the presence of disease before it becomes visible to the naked eye, while the <em>Kattivo</em> technology kit, developed with Ruffino\u2019s involvement, adjusts the dosage of crop-protection products according to the thickness of the vine canopy, achieving savings of up to <strong>30%</strong> on plant-protection products.',
+
+          sociale_tag: 'S · Social',
+          sociale_title: 'Equity and the value chain',
+          sociale_lead: 'The social dimension of Ruffino\u2019s ESG strategy unfolds along two complementary lines: on one hand, enhancing internal human capital through policies geared towards inclusion, worker protection and equal opportunities; on the other, promoting responsible practices along the entire value chain, involving suppliers, business partners and, ultimately, consumers themselves.',
+          social_highlight_title: 'Gender Equality Certification',
+          social_highlight_text: 'A significant milestone in this journey was achieving Gender Equality Certification under the UNI/PdR 125:2022 practice, confirming the adoption of a management system designed to ensure equity, inclusion and equal opportunities within the organisation. A dedicated steering committee was also established, tasked with defining policies, monitoring performance indicators and promoting actions to foster equal access to positions of responsibility, alongside the progressive elimination of the gender pay gap.',
+          mini_stat1: '<span class="mini-stat-number">40/60</span> ratio between female and male workforce',
+          mini_stat2: '<span class="mini-stat-number">~40%</span> strategic leadership and management positions held by women',
+          mini_stat3: '<span class="mini-stat-number">0</span> pay gap recorded between genders',
+          social1_title: 'Evaluation of Sustainability',
+          social1_text: 'Ruffino regards its suppliers as an integral part of its sustainability journey and requires them to comply with ethical, social and environmental standards consistent with the company\u2019s values. An indicator called <strong>Evaluation of Sustainability (EoS)</strong> has been introduced, derived from a questionnaire administered to <em>dry goods</em> suppliers \u2014 such as bottling materials, packaging and distribution \u2014 to assess their level of sustainability and compare it against the company\u2019s minimum standards across the entire supply chain.',
+          social2_title: 'Wine in Moderation',
+          social2_text: 'As part of its efforts to promote responsible consumption, Ruffino serves as an <em>Ambassador Company</em> for the European <strong>Wine in Moderation (WiM)</strong> program, actively committed to spreading a culture of mindful, moderate drinking, considered one of the pillars of the company\u2019s social responsibility.',
+          social3_title: 'Awareness campaigns',
+          social3_text: 'This commitment translates concretely into informative messages and dedicated logos on product labels, support for scholarships dedicated to medical research on alcohol-abuse-related conditions, and participation in awareness campaigns, such as <em>In Vino Virtus</em>, carried out in partnership with law enforcement across the country.',
+
+          gov_title: 'Compliance and continuous improvement',
+          gov_lead: 'The Sustainability Report highlights a governance system built on an organisational model strengthened by dedicated divisions for specific topics, objectives linked to management performance evaluation, and a path to operational excellence recognised internationally.',
+          gov_p1: 'Within this structure, the CEO is responsible for implementing corporate strategies, supported by the Executive Committee and the <strong>Sustainability &amp; Environment Team</strong>. Through this team, coordinated by the CSR &amp; Environmental Sustainability Manager, regular meetings are held to review sustainability initiatives and programmes against a defined set of objectives, constantly monitoring performance and the related KPIs.',
+          gov_p2: 'Reinforcing the Group\u2019s commitment in this direction, since 2020 Ruffino has formally linked the achievement of these objectives to its top management\u2019s performance evaluation system, based on a <em>Management by Objectives</em> (MBO) approach: a mechanism that makes sustainability an integral part, rather than a secondary aspect, of managerial responsibility.',
+          gov_img_caption: 'The historic cellar, where tradition meets process · Source: ruffino.it',
+          gov_kpi1_text: 'Coordinated by the CSR &amp; Environmental Sustainability Manager, with regular meetings to review sustainability initiatives, programmes and KPIs, in direct support of the CEO and the Executive Committee.',
+          gov_kpi2_text: 'Since 2020, sustainability objectives have been formally linked to the top management evaluation system (MBO), making ESG performance a structural rather than secondary criterion of corporate management.',
+          gov_kpi3_text: 'Thanks to the improvements achieved over time, in May 2023 the company successfully passed the first assessment phase for the <em>Award for TPM Excellence</em>, granted by the Japan Institute of Plant Maintenance (JIPM).',
+          gov_tpm_p: 'On an operational level, the turning point is represented by the introduction of the <strong>Total Productive Maintenance (TPM)</strong> method, a practical <em>Learning Organization</em> approach aimed at systematically reducing waste and inefficiencies through the active involvement of the entire workforce, following a continuous-improvement philosophy built on nine operational pillars \u2014 among which those dedicated to workplace safety (<em>Health &amp; Safety</em>), ongoing staff training (<em>Training &amp; Education</em>) and environmental protection stand out. This achievement places Ruffino among the most advanced realities within the Constellation Brands group in terms of continuous improvement and operational excellence.',
+          gov_table_title: 'Total Productive Maintenance (TPM) results',
+          gov_table_subtitle: 'FY 2023 vs 2019 Baseline comparison',
+          gov_table_caption: 'Table of Ruffino\u2019s TPM operational results, comparing fiscal year 2023 with the 2019 baseline, together with the related strategic implication.',
+          gov_th1: 'Operational indicator',
+          gov_th2: 'Result achieved',
+          gov_th3: 'Strategic implication',
+          row1_th: 'Plant efficiency',
+          row1_td3: 'Optimisation of bottling times and reduction of energy consumption per unit of product.',
+          row2_th: 'Equipment breakdowns',
+          row2_td3: 'Reduction of machine downtime and minimisation of raw material waste.',
+          row3_th: 'Customer complaints',
+          row3_td3: 'Higher quality standards as perceived by the end market.',
+          row4_th: 'Delivery punctuality',
+          row4_extra: '(&gt;90% absolute value)',
+          row4_td3: 'Strengthening of commercial relationships with large retailers and export markets.',
+          row5_th: 'Unsafe acts/conditions',
+          row5_td3: 'Active prevention of workplace injuries and improved company climate.',
+          row6_th: 'Staff training',
+          row6_extra: 'total hours',
+          row6_td3: 'Highly specialised staff and a widespread culture of continuous improvement.',
+
+          sdg_eyebrow: '2030 Agenda',
+          sdg_title: 'The 9 Sustainable Development Goals addressed',
+          sdg_lead: 'The 2030 Agenda, unanimously adopted in 2015 by the 193 member states of the United Nations, sets out 17 Sustainable Development Goals (SDGs) as a fundamental guide for the evolution of sustainability at company level. Ruffino has chosen to act directly on these nine targets, constantly monitoring the relevant metrics and actively working to meet the requirements involved.',
+          sdg1_title: 'Good health and well-being',
+          sdg1_text: 'Strengthen the prevention of harmful alcohol use, promoting awareness and moderation in consumption.',
+          sdg2_title: 'Gender equality',
+          sdg2_text: 'Ensure women\u2019s full and effective participation and equal leadership opportunities at all levels of decision-making.',
+          sdg3_title: 'Clean water and sanitation',
+          sdg3_text: 'Substantially increase water-use efficiency across all production sectors.',
+          sdg4_title: 'Affordable and clean energy',
+          sdg4_text: 'Considerably increase the share of renewable energy in the overall energy mix used.',
+          sdg5_title: 'Decent work and economic growth',
+          sdg5_text: 'Achieve higher levels of economic productivity through diversification, technological upgrading and innovation.',
+          sdg6_title: 'Responsible consumption and production',
+          sdg6_text: 'By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse.',
+          sdg7_title: 'Climate action',
+          sdg7_text: 'Strengthen resilience and adaptive capacity to climate-related risks and natural disasters.',
+          sdg8_title: 'Life on land',
+          sdg8_text: 'Take urgent and significant action to reduce the degradation of natural habitats and halt the loss of biodiversity.',
+          sdg9_title: 'Partnerships for the goals',
+          sdg9_text: 'Enhance the global partnership for sustainable development, sharing knowledge, expertise, and technological and financial resources.',
+
+          cta_eyebrow: 'Learn more',
+          cta_title: 'Continue exploring',
+          cta_lead: 'This page summarises the main contents of Ruffino\u2019s Sustainability Report. For the full text and methodological details on the GRI indicators, the original documents can be downloaded in PDF format, made available here as supporting material for this project.',
+          cta_btn1: 'Sustainability Report FY 2023',
+
+          footer_text: 'This page was created for informational/academic purposes, to summarise in an accessible way the contents of Ruffino\u2019s Sustainability Report (FY 2023), prepared in accordance with Global Reporting Initiative (GRI) standards. The original documents and some images of estates and vineyards are provided as reference material, with the source indicated, for purely illustrative and non-commercial purposes.',
+          footer_heading1: 'Main sources',
+          footer_link1: 'Sustainability Report FY 2023',
+          footer_link3: 'Official Ruffino website',
+          footer_link4: 'WCAG 2.1 guidelines',
+          footer_link5: 'UN 2030 Agenda',
+          footer_heading2: 'Navigate',
+          footer_nav2: 'Environment',
+          footer_nav3: 'Social',
+          footer_note: 'Unofficial academic project, not affiliated with Ruffino S.r.l. or Constellation Brands. Content summarised from the Sustainability Report published by the company.'
+        }
+      };
+
+      var attrTranslations = {
+        en: {
+          navbar_toggle_aria: 'Open/close the navigation menu',
+          azienda_map_alt: 'Illustrated map of Tuscany showing the location of Ruffino\u2019s seven estates: Poggio Casciano, Montemasso, Gretole, Santedame, La Garzaia, La Solat\u00eca and Greppone Mazzi.',
+          media_duo_aria: 'Photographs of Ruffino\u2019s estates and vineyards in Tuscany',
+          amb_img1_alt: 'Vineyard rows lit by the light of dawn, with morning mist over the Tuscan hills.',
+          amb_img2_alt: 'Aerial view of a Ruffino estate with vineyard rows, olive groves and cypress trees set across the Tuscan hillside landscape.',
+          mini_stats_aria: 'Gender equality statistics',
+          gov_img_alt: 'Interior of the historic Ruffino cellar with wooden barrels used for wine ageing.',
+          back_to_top_aria: 'Back to top of the page'
+        }
+      };
+
+      var THEME_LABELS = {
+        it: { toDark: 'Tema scuro', toLight: 'Tema chiaro' },
+        en: { toDark: 'Dark theme', toLight: 'Light theme' }
+      };
+
+      var itCache = new Map();
+      var itAttrCache = new Map();
+      var titleItOriginal = document.title;
+      var metaDescriptionEl = document.querySelector('meta[name="description"]');
+      var metaDescriptionItOriginal = metaDescriptionEl.getAttribute('content');
+
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        itCache.set(el, el.innerHTML);
+      });
+      document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+        itAttrCache.set(el, el.getAttribute('alt'));
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+        itAttrCache.set(el, el.getAttribute('aria-label'));
+      });
+
+      var currentLang = localStorage.getItem(LANG_KEY) || 'it';
+      var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+
+      function applyLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.setAttribute('lang', lang);
+
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          var key = el.getAttribute('data-i18n');
+          if (lang === 'it') {
+            el.innerHTML = itCache.get(el);
+          } else if (translations.en[key] !== undefined) {
+            el.innerHTML = translations.en[key];
+          }
+        });
+
+        document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+          var key = el.getAttribute('data-i18n-alt');
+          if (lang === 'it') {
+            el.setAttribute('alt', itAttrCache.get(el));
+          } else if (attrTranslations.en[key] !== undefined) {
+            el.setAttribute('alt', attrTranslations.en[key]);
+          }
+        });
+
+        document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+          var key = el.getAttribute('data-i18n-aria');
+          if (lang === 'it') {
+            el.setAttribute('aria-label', itAttrCache.get(el));
+          } else if (attrTranslations.en[key] !== undefined) {
+            el.setAttribute('aria-label', attrTranslations.en[key]);
+          }
+        });
+
+        document.title = lang === 'it' ? titleItOriginal : metaTitleEn;
+        metaDescriptionEl.setAttribute('content', lang === 'it' ? metaDescriptionItOriginal : metaDescriptionEn);
+
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          var isActive = btn.getAttribute('data-lang') === lang;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-pressed', String(isActive));
+        });
+
+        localStorage.setItem(LANG_KEY, lang);
+        updateThemeButtonLabel();
+      }
+
+      var themeToggleBtn = document.getElementById('themeToggle');
+      var themeIcon = themeToggleBtn.querySelector('i');
+      var themeLabelEl = themeToggleBtn.querySelector('.theme-toggle-label');
+
+      function updateThemeButtonLabel() {
+        var labels = THEME_LABELS[currentLang] || THEME_LABELS.it;
+        var isDark = currentTheme === 'dark';
+        themeLabelEl.textContent = isDark ? labels.toLight : labels.toDark;
+        themeIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        themeToggleBtn.setAttribute('aria-pressed', String(isDark));
+      }
+
+      function applyTheme(theme) {
+        currentTheme = theme;
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem(THEME_KEY, theme);
+        updateThemeButtonLabel();
+      }
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          applyLanguage(btn.getAttribute('data-lang'));
+        });
+      });
+
+      themeToggleBtn.addEventListener('click', function () {
+        applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+      });
+
+      // Inizializzazione: applica lingua e tema salvati (o i default) al primo caricamento
+      applyLanguage(currentLang);
+      updateThemeButtonLabel();
+    })();
+  </script>
+</body>
+</html>
