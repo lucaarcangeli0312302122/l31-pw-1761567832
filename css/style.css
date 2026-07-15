@@ -370,6 +370,17 @@ button:focus-visible,
   margin-bottom: 2.75rem;
 }
 
+.pilastri-logo {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1rem;
+  background-color: #fff;
+  padding: 0.35rem;
+}
+
 .section-eyebrow {
   display: inline-block;
   font-weight: 700;
@@ -420,7 +431,7 @@ button:focus-visible,
   background:
     radial-gradient(circle at 15% 20%, rgba(201, 162, 39, 0.22), transparent 45%),
     linear-gradient(160deg, rgba(58, 14, 26, 0.94) 0%, rgba(74, 18, 32, 0.9) 55%, rgba(110, 30, 50, 0.88) 100%),
-    url("asset/images/hero-vigneto.jpg");
+    url("../asset/img/hero-vigneto.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -636,6 +647,20 @@ button:focus-visible,
   margin-bottom: 2.75rem;
 }
 
+.image-card-wide {
+  margin-bottom: 2.75rem;
+}
+
+.image-card-wide img {
+  aspect-ratio: 16 / 7;
+}
+
+@media (max-width: 575.98px) {
+  .image-card-wide img {
+    aspect-ratio: 4 / 5;
+  }
+}
+
 .media-duo .image-card {
   aspect-ratio: unset;
 }
@@ -658,7 +683,7 @@ button:focus-visible,
   align-items: center;
   background-image:
     linear-gradient(120deg, rgba(58, 14, 26, 0.82), rgba(58, 14, 26, 0.55) 55%, rgba(58, 14, 26, 0.3)),
-    url("asset/images/tenuta-gretole.jpg");
+    url("../asset/img/tenuta-gretole.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -689,7 +714,7 @@ button:focus-visible,
   padding: clamp(3.5rem, 3rem + 2vw, 6rem) 0;
   background-image:
     linear-gradient(160deg, rgba(58, 14, 26, 0.92), rgba(74, 18, 32, 0.85)),
-    url("asset/images/vigneto-filari.jpg");
+    url("../asset/img/vigneto-filari.jpg");
   background-size: cover;
   background-position: center 30%;
   text-align: center;
@@ -793,6 +818,16 @@ button:focus-visible,
   font-weight: 700;
   color: var(--accent-color-strong);
   margin-right: 0.4rem;
+}
+
+.mini-stats-plain {
+  border-top: none;
+  padding-top: 0;
+}
+
+.mini-stats-plain .mini-stat-number {
+  color: var(--accent-color);
+  margin-right: 0.6rem;
 }
 
 /* =========================================================
