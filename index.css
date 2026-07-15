@@ -370,6 +370,17 @@ button:focus-visible,
   margin-bottom: 2.75rem;
 }
 
+.pilastri-logo {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1rem;
+  background-color: #fff;
+  padding: 0.35rem;
+}
+
 .section-eyebrow {
   display: inline-block;
   font-weight: 700;
@@ -636,6 +647,20 @@ button:focus-visible,
   margin-bottom: 2.75rem;
 }
 
+.image-card-wide {
+  margin-bottom: 2.75rem;
+}
+
+.image-card-wide img {
+  aspect-ratio: 16 / 7;
+}
+
+@media (max-width: 575.98px) {
+  .image-card-wide img {
+    aspect-ratio: 4 / 5;
+  }
+}
+
 .media-duo .image-card {
   aspect-ratio: unset;
 }
@@ -793,6 +818,16 @@ button:focus-visible,
   font-weight: 700;
   color: var(--accent-color-strong);
   margin-right: 0.4rem;
+}
+
+.mini-stats-plain {
+  border-top: none;
+  padding-top: 0;
+}
+
+.mini-stats-plain .mini-stat-number {
+  color: var(--accent-color);
+  margin-right: 0.6rem;
 }
 
 /* =========================================================
