@@ -32,6 +32,9 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" referrerpolicy="no-referrer" />
 
+  <!-- Flag Icons (bandiere SVG, evita problemi di rendering degli emoji su Windows) -->
+  <link href="https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/css/flag-icons.min.css" rel="stylesheet" />
+
   <!-- CSS personalizzato -->
   <link href="index.css" rel="stylesheet" />
 </head>
@@ -45,10 +48,10 @@
     <div class="container utility-bar-inner">
       <div class="lang-switch" role="group" aria-label="Selettore lingua / Language selector">
         <button type="button" class="lang-btn active" data-lang="it" aria-pressed="true" aria-label="Italiano">
-          <span class="flag" aria-hidden="true">🇮🇹</span>IT
+          <span class="flag fi fi-it" aria-hidden="true"></span>IT
         </button>
         <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">
-          <span class="flag" aria-hidden="true">🇬🇧</span>EN
+          <span class="flag fi fi-gb" aria-hidden="true"></span>EN
         </button>
       </div>
       <button type="button" id="themeToggle" class="theme-toggle" aria-pressed="false">
@@ -111,7 +114,8 @@
         </div>
       </div>
 
-      <!-- Numeri chiave -->
+      <!-- TODO: aggiungere KPI dai report -->
+      <!-- Indicatori chiave -->
       <div class="container">
         <dl class="hero-stats reveal">
           <div class="hero-stat">
@@ -506,6 +510,7 @@
           dell'eccellenza operativa.
         </p>
 
+        <!-- TODO: fixring su visualizzazione tema e colori -->
         <div class="table-card reveal">
           <h3 class="table-card-title">
             <i class="fa-solid fa-gears" aria-hidden="true"></i>
@@ -804,6 +809,7 @@
     })();
   </script>
 
+  <!--TODO: migliorare con gestione lato BE -->
   <!-- Selettore lingua (IT/EN) e tema chiaro/scuro -->
   <script>
     (function () {

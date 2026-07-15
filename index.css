@@ -249,7 +249,9 @@ button:focus-visible,
 }
 
 .lang-btn .flag {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
 }
 
 .lang-btn:hover {
