@@ -431,7 +431,7 @@ button:focus-visible,
   background:
     radial-gradient(circle at 15% 20%, rgba(201, 162, 39, 0.22), transparent 45%),
     linear-gradient(160deg, rgba(58, 14, 26, 0.94) 0%, rgba(74, 18, 32, 0.9) 55%, rgba(110, 30, 50, 0.88) 100%),
-    url("asset/images/hero-vigneto.jpg");
+    url("../asset/img/hero-vigneto.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -683,7 +683,7 @@ button:focus-visible,
   align-items: center;
   background-image:
     linear-gradient(120deg, rgba(58, 14, 26, 0.82), rgba(58, 14, 26, 0.55) 55%, rgba(58, 14, 26, 0.3)),
-    url("asset/images/tenuta-gretole.jpg");
+    url("../asset/img/tenuta-gretole.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -714,7 +714,7 @@ button:focus-visible,
   padding: clamp(3.5rem, 3rem + 2vw, 6rem) 0;
   background-image:
     linear-gradient(160deg, rgba(58, 14, 26, 0.92), rgba(74, 18, 32, 0.85)),
-    url("asset/images/vigneto-filari.jpg");
+    url("../asset/img/vigneto-filari.jpg");
   background-size: cover;
   background-position: center 30%;
   text-align: center;
