@@ -317,6 +317,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var itCache = new Map();
     var itAttrCache = new Map();
+    var itLabelCache = new Map();
     var titleItOriginal = document.title;
     var metaDescriptionEl = document.querySelector('meta[name="description"]');
     var metaDescriptionItOriginal = metaDescriptionEl.getAttribute('content');
@@ -329,6 +330,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
       itAttrCache.set(el, el.getAttribute('aria-label'));
+    });
+    document.querySelectorAll('[data-i18n-label]').forEach(function (el) {
+      itLabelCache.set(el, el.getAttribute('data-label'));
     });
 
     var currentLang = localStorage.getItem(LANG_KEY) || 'it';
@@ -362,6 +366,15 @@ document.addEventListener('DOMContentLoaded', function () {
           el.setAttribute('aria-label', itAttrCache.get(el));
         } else if (attrTranslations.en[key] !== undefined) {
           el.setAttribute('aria-label', attrTranslations.en[key]);
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-label]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n-label');
+        if (lang === 'it') {
+          el.setAttribute('data-label', itLabelCache.get(el));
+        } else if (translations.en[key] !== undefined) {
+          el.setAttribute('data-label', translations.en[key]);
         }
       });
 

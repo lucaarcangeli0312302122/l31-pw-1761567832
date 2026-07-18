@@ -586,13 +586,13 @@
         </div>
         <div class="row g-4">
           <div class="col-lg-7 reveal">
-            <div class="table-card h-100">
+            <div class="table-card">
               <h3 class="table-card-title">
                 <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
                 <span data-i18n="social_table_title">Risorse destinate al territorio (Euro)</span>
               </h3>
               <p class="table-card-subtitle" data-i18n="social_table_subtitle">Confronto FY 2023 · FY 2022 · FY 2021</p>
-              <div class="table-responsive">
+              <div class="table-card-body">
                 <table class="table tpm-table" aria-describedby="giving-caption">
                   <caption id="giving-caption" class="visually-hidden" data-i18n="social_table_caption">
                     Tabella delle risorse economiche destinate da Ruffino a donazioni, borse di studio e attività
@@ -609,21 +609,21 @@
                   <tbody>
                     <tr>
                       <th scope="row" data-i18n="social_grow1">Donazioni</th>
-                      <td>36.022</td>
-                      <td>52.000</td>
-                      <td>289.926</td>
+                      <td data-label="FY 2023">36.022</td>
+                      <td data-label="FY 2022">52.000</td>
+                      <td data-label="FY 2021">289.926</td>
                     </tr>
                     <tr>
                       <th scope="row" data-i18n="social_grow2">Bere responsabile (borse di studio)</th>
-                      <td>12.600</td>
-                      <td>14.500</td>
-                      <td>21.632</td>
+                      <td data-label="FY 2023">12.600</td>
+                      <td data-label="FY 2022">14.500</td>
+                      <td data-label="FY 2021">21.632</td>
                     </tr>
                     <tr>
                       <th scope="row" data-i18n="social_grow3">Attività Ruffino Cares</th>
-                      <td>35.000</td>
-                      <td>30.200</td>
-                      <td>52.570</td>
+                      <td data-label="FY 2023">35.000</td>
+                      <td data-label="FY 2022">30.200</td>
+                      <td data-label="FY 2021">52.570</td>
                     </tr>
                   </tbody>
                 </table>
@@ -765,14 +765,13 @@
           dell'eccellenza operativa.
         </p>
 
-        <!-- TODO: fixing su visualizzazione tema e colori -->
         <div class="table-card reveal">
           <h3 class="table-card-title">
             <i class="fa-solid fa-gears" aria-hidden="true"></i>
             <span data-i18n="gov_table_title">Risultati del Total Productive Maintenance (TPM)</span>
           </h3>
           <p class="table-card-subtitle" data-i18n="gov_table_subtitle">Confronto FY 2023 vs Baseline 2019</p>
-          <div class="table-responsive">
+          <div class="table-card-body">
             <table class="table tpm-table" aria-describedby="tpm-caption">
               <caption id="tpm-caption" class="visually-hidden" data-i18n="gov_table_caption">
                 Tabella dei risultati operativi TPM di Ruffino, con confronto tra l'anno fiscale 2023 e
@@ -788,33 +787,33 @@
               <tbody>
                 <tr>
                   <th scope="row" data-i18n="row1_th">Efficienza di fabbrica</th>
-                  <td><span class="badge-trend badge-up">+4 p.p.</span></td>
-                  <td data-i18n="row1_td3">Ottimizzazione dei tempi di imbottigliamento e riduzione dei consumi energetici per unità di prodotto.</td>
+                  <td data-i18n-label="gov_th2" data-label="Risultato conseguito"><span class="badge-trend badge-up">+4 p.p.</span></td>
+                  <td data-i18n-label="gov_th3" data-label="Implicazione strategica" data-i18n="row1_td3">Ottimizzazione dei tempi di imbottigliamento e riduzione dei consumi energetici per unità di prodotto.</td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="row2_th">Guasti agli impianti</th>
-                  <td><span class="badge-trend badge-down">-80%</span></td>
-                  <td data-i18n="row2_td3">Riduzione dei tempi di fermo macchina e minimizzazione degli scarti di materie prime.</td>
+                  <td data-i18n-label="gov_th2" data-label="Risultato conseguito"><span class="badge-trend badge-down">-80%</span></td>
+                  <td data-i18n-label="gov_th3" data-label="Implicazione strategica" data-i18n="row2_td3">Riduzione dei tempi di fermo macchina e minimizzazione degli scarti di materie prime.</td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="row3_th">Reclami dei clienti</th>
-                  <td><span class="badge-trend badge-down">-65%</span></td>
-                  <td data-i18n="row3_td3">Innalzamento dello standard qualitativo percepito dal mercato finale.</td>
+                  <td data-i18n-label="gov_th2" data-label="Risultato conseguito"><span class="badge-trend badge-down">-65%</span></td>
+                  <td data-i18n-label="gov_th3" data-label="Implicazione strategica" data-i18n="row3_td3">Innalzamento dello standard qualitativo percepito dal mercato finale.</td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="row4_th">Puntualità delle consegne</th>
-                  <td><span class="badge-trend badge-up">+17%</span> <span class="text-muted small" data-i18n="row4_extra">(&gt;90% assoluto)</span></td>
-                  <td data-i18n="row4_td3">Consolidamento delle relazioni commerciali con la grande distribuzione e i mercati export.</td>
+                  <td data-i18n-label="gov_th2" data-label="Risultato conseguito"><span class="badge-trend badge-up">+17%</span> <span class="text-muted small" data-i18n="row4_extra">(&gt;90% assoluto)</span></td>
+                  <td data-i18n-label="gov_th3" data-label="Implicazione strategica" data-i18n="row4_td3">Consolidamento delle relazioni commerciali con la grande distribuzione e i mercati export.</td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="row5_th">Azioni/condizioni non sicure</th>
-                  <td><span class="badge-trend badge-down">-80%</span></td>
-                  <td data-i18n="row5_td3">Prevenzione attiva degli infortuni sul lavoro e miglioramento del clima aziendale.</td>
+                  <td data-i18n-label="gov_th2" data-label="Risultato conseguito"><span class="badge-trend badge-down">-80%</span></td>
+                  <td data-i18n-label="gov_th3" data-label="Implicazione strategica" data-i18n="row5_td3">Prevenzione attiva degli infortuni sul lavoro e miglioramento del clima aziendale.</td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="row6_th">Formazione del personale</th>
-                  <td><span class="badge-trend badge-up">×5</span> <span class="text-muted small" data-i18n="row6_extra">ore totali</span></td>
-                  <td data-i18n="row6_td3">Elevata specializzazione degli operatori e diffusione della cultura del miglioramento continuo.</td>
+                  <td data-i18n-label="gov_th2" data-label="Risultato conseguito"><span class="badge-trend badge-up">×5</span> <span class="text-muted small" data-i18n="row6_extra">ore totali</span></td>
+                  <td data-i18n-label="gov_th3" data-label="Implicazione strategica" data-i18n="row6_td3">Elevata specializzazione degli operatori e diffusione della cultura del miglioramento continuo.</td>
                 </tr>
               </tbody>
             </table>
